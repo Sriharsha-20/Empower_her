@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profile Card</title>
+
+    <style>
+        .card {
+            width: 300px;
+            height: 400px;
+            margin: auto; 
+            padding: 20px; 
+            border: 2px solid black;
+            border-radius: 15px; 
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3); 
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <div class="card">
+        <img src="https://coding-platform.s3.amazonaws.com/dev/lms/tickets/28b0fddc-47bf-4e51-9bb0-e890bff20222/qww0RPbYDupoMjuR.png" alt="Profile Image" class="profile-img">
+
+        <h2 class="name">Sunka Sriharsha</h2>
+
+        <p class="description">
+            B.TECH Graduate student always exploring new technologies and improving skills every day.
+        </p>
+    </div>
+
 </body>
 </html>
