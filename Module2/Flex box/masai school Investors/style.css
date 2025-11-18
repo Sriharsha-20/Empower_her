@@ -1,0 +1,45 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.profile {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-info h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.profile-info p {
+    font-size: 22px;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+
+.company-logo {
+    max-width: 100px;
+    height: auto;
+    display: block;
+}

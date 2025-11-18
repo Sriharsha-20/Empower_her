@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent {
+            display:grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap:  20px;
+        }
+
+        #parent > div {
+            background-color: beige;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        #parent > div:first-child {
+            /* the below is the best solution */
+            visibility: hidden;
+
+        }
+
+         #parent > div:last-child {
+            grid-column: span 6;
+            background-color: aqua;
+            text-align: left;
+         }
+
+         #parent > div:nth-child {
+            grid-column: span 6;
+            background-color: aqua;
+
+         }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div>Empty</div>
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+
+          <!-- Header row -->
+        <div class="grid">
+            <div class="head time">Time</div>
+            <div class="head">Monday</div>
+            <div class="head">Tuesday</div>
+            <div class="head">Wednesday</div>
+            <div class="head">Thursday</div>
+            <div class="head">Friday</div>
+
+            <!-- 08:00 -->
+            <div class="time">08:00</div>
+            <div class="cell">Assembly</div>
+            <div class="cell">Assembly</div>
+            <div class="cell">Assembly</div>
+            <div class="cell">Assembly</div>
+            <div class="cell">Assembly</div>
+
+            <!-- 09:00 -->
+            <div class="time">09:00</div>
+            <div class="cell">English</div>
+            <div class="cell">Maths</div>
+            <div class="cell">EVS</div>
+            <div class="cell">Hindi</div>
+            <div class="cell">Computer</div>
+
+            <!-- 10:00 -->
+            <div class="time">10:00</div>
+            <div class="cell">Maths</div>
+            <div class="cell">English</div>
+            <div class="cell">Hindi</div>
+            <div class="cell">EVS</div>
+            <div class="cell">Art & Craft</div>
+
+            <!-- 11:00 (yellow row) -->
+            <div class="time">11:00</div>
+            <div class="cell row-yellow">PT</div>
+            <div class="cell row-yellow">Library</div>
+            <div class="cell row-yellow">Music</div>
+            <div class="cell row-yellow">PT</div>
+            <div class="cell row-yellow">Dance</div>
+
+            <!-- 12:00 -->
+            <div class="time">12:00</div>
+            <div class="cell">EVS</div>
+            <div class="cell">Computer</div>
+            <div class="cell">Maths</div>
+            <div class="cell">English</div>
+            <div class="cell">Hindi</div>
+
+            <!-- 13:00 (Lunch) -->
+            <div class="time">13:00</div>
+            <div class="cell row-yellow">Lunch Break</div>
+            <div class="cell row-yellow">Lunch Break</div>
+            <div class="cell row-yellow">Lunch Break</div>
+            <div class="cell row-yellow">Lunch Break</div>
+            <div class="cell row-yellow">Lunch Break</div>
+
+            <!-- 14:00 -->
+            <div class="time">14:00</div>
+            <div class="cell">Science Lab</div>
+            <div class="cell">EVS</div>
+            <div class="cell">Computer</div>
+            <div class="cell">Maths</div>
+            <div class="cell">English</div>
+
+            <!-- 15:00 -->
+            <div class="time">15:00</div>
+            <div class="cell">Drawing</div>
+            <div class="cell">GK</div>
+            <div class="cell">Handwriting</div>
+            <div class="cell">Yoga</div>
+            <div class="cell">Reading</div>
+
+            <!-- 16:00 (tests/club) -->
+            <div class="time">16:00</div>
+            <div class="cell">Club Activity</div>
+            <div class="cell">Revision <span class="tag">Unit Test</span></div>
+            <div class="cell">Story Time</div>
+            <div class="cell">Computer Lab</div>
+            <div class="cell">Quiz <span class="tag">Oral</span></div>
+        </div>
+
+        <div class="note">Note: Bring PT dress on Monday & Thursday. Unit Test every 2nd Tuesday.</div>
+    </div>
+</body>
+</html>
