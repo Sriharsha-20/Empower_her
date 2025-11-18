@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weekly Schedule</title>
     <style>
+        h1 {
+            text-align: center;
+            font-weight: bolder;
+            font-size: 50px
+        }
+       
         #parent {
             display:grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(6, 3fr);
             gap:  20px;
+            text-align: center;
+            padding: 20px;
+           
         }
 
         #parent > div {
@@ -32,14 +41,28 @@
             text-align: left;
          }
 
-         #parent > div:nth-child {
-            grid-column: span 6;
-            background-color: aqua;
+         #parent > div:nth-child(even) {
+            background-color:pink;
+         }
 
+         .time {
+            background-color: lightskyblue;
+         }
+
+         #parent > div:nth-child(odd) {
+            background-color:rgba(250, 250, 5, 0.542);
+         }
+
+         .note{
+            display: grid;
+            background-color: lightskyblue;
+            padding: 10px;
+            font-size: large;
          }
     </style>
 </head>
 <body>
+    <h1>Weekly Schedule</h1>
     <div id="parent">
         <div>Empty</div>
         <div>Monday</div>
@@ -48,57 +71,48 @@
         <div>Thursday</div>
         <div>Friday</div>
 
-          <!-- Header row -->
-        <div class="grid">
-            <div class="head time">Time</div>
-            <div class="head">Monday</div>
-            <div class="head">Tuesday</div>
-            <div class="head">Wednesday</div>
-            <div class="head">Thursday</div>
-            <div class="head">Friday</div>
-
             <!-- 08:00 -->
-            <div class="time">08:00</div>
-            <div class="cell">Assembly</div>
-            <div class="cell">Assembly</div>
-            <div class="cell">Assembly</div>
-            <div class="cell">Assembly</div>
-            <div class="cell">Assembly</div>
+            <div class="time" style="background-color: lightskyblue;">08:00</div>
+            <div class="cell">Prayer</div>
+            <div class="cell">Prayer</div>
+            <div class="cell">Prayer</div>
+            <div class="cell">Prayer</div>
+            <div class="cell">Prayer</div>
 
             <!-- 09:00 -->
-            <div class="time">09:00</div>
+            <div class="time" style="background-color: lightskyblue;">09:00</div>
+            <div class="cell">Hindi</div>
             <div class="cell">English</div>
             <div class="cell">Maths</div>
-            <div class="cell">EVS</div>
-            <div class="cell">Hindi</div>
-            <div class="cell">Computer</div>
-
+            <div class="cell">Science</div>
+            <div class="cell">Social</div>
+           
             <!-- 10:00 -->
-            <div class="time">10:00</div>
-            <div class="cell">Maths</div>
+            <div class="time" style="background-color: lightskyblue;">10:00</div>
             <div class="cell">English</div>
-            <div class="cell">Hindi</div>
-            <div class="cell">EVS</div>
-            <div class="cell">Art & Craft</div>
+            <div class="cell">Maths</div>
+            <div class="cell">Science</div>
+            <div class="cell">Social</div>
+             <div class="cell">Computer</div>
 
             <!-- 11:00 (yellow row) -->
-            <div class="time">11:00</div>
-            <div class="cell row-yellow">PT</div>
-            <div class="cell row-yellow">Library</div>
-            <div class="cell row-yellow">Music</div>
-            <div class="cell row-yellow">PT</div>
-            <div class="cell row-yellow">Dance</div>
+            <div class="time" style="background-color: lightskyblue">11:00</div>
+            <div class="cell ">Break</div>
+            <div class="cell ">Break</div>
+            <div class="cell ">Break</div>
+            <div class="cell ">Break</div>
+            <div class="cell ">Break</div>
 
             <!-- 12:00 -->
-            <div class="time">12:00</div>
-            <div class="cell">EVS</div>
-            <div class="cell">Computer</div>
+            <div class="time" style="background-color: lightskyblue">12:00</div>
             <div class="cell">Maths</div>
-            <div class="cell">English</div>
+            <div class="cell">Science</div>
+            <div class="cell">Social</div>
+            <div class="cell">Computer</div>
             <div class="cell">Hindi</div>
 
             <!-- 13:00 (Lunch) -->
-            <div class="time">13:00</div>
+            <div class="time" style="background-color: lightskyblue">13:00</div>
             <div class="cell row-yellow">Lunch Break</div>
             <div class="cell row-yellow">Lunch Break</div>
             <div class="cell row-yellow">Lunch Break</div>
@@ -106,31 +120,32 @@
             <div class="cell row-yellow">Lunch Break</div>
 
             <!-- 14:00 -->
-            <div class="time">14:00</div>
-            <div class="cell">Science Lab</div>
-            <div class="cell">EVS</div>
+            <div class="time" style="background-color: lightskyblue">14:00</div>
+            <div class="cell">Science</div>
+            <div class="cell">Social</div>
             <div class="cell">Computer</div>
             <div class="cell">Maths</div>
             <div class="cell">English</div>
 
             <!-- 15:00 -->
-            <div class="time">15:00</div>
-            <div class="cell">Drawing</div>
-            <div class="cell">GK</div>
-            <div class="cell">Handwriting</div>
-            <div class="cell">Yoga</div>
-            <div class="cell">Reading</div>
+            <div class="time" style="background-color: lightskyblue">15:00</div>
+            <div class="cell">Lab</div>
+            <div class="cell">Computer lab</div>
+            <div class="cell">English lab</div>
+            <div class="cell">Quiz</div>
+            <div class="cell">Studying</div>
 
             <!-- 16:00 (tests/club) -->
-            <div class="time">16:00</div>
-            <div class="cell">Club Activity</div>
-            <div class="cell">Revision <span class="tag">Unit Test</span></div>
-            <div class="cell">Story Time</div>
-            <div class="cell">Computer Lab</div>
-            <div class="cell">Quiz <span class="tag">Oral</span></div>
+            <div class="time" style="background-color: lightskyblue">16:00</div>
+            <div class="cell">Pt</div>
+            <div class="cell">Test hour<span class="tag">Unit Test</span></div>
+            <div class="cell">Speaking session</div>
+            <div class="cell">Dance class</div>
+            <div class="cell">GK</div>
+            <div style="background-color: white;"></div>
         </div>
 
-        <div class="note">Note: Bring PT dress on Monday & Thursday. Unit Test every 2nd Tuesday.</div>
+        <div class="note">Note: Bring the Pt Uniform on Monday .</div>
     </div>
 </body>
 </html>
