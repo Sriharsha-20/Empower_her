@@ -1,123 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masai Calculator</title>
+    <title>Masai School Investors</title>
     <style>
+        /* General Page Styling */
+        
         body {
-            margin: 0;
-            font-family: system-ui, sans-serif;
-            background-color: #f5f5f5;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Added visible border around the calculator */
-        .calculator {
-            background: white;
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            width: 340px;
-            border: 8px solid #333;        /* ← This creates the thick dark box/boundary */
-            box-sizing: border-box;        /* Ensures padding doesn't add extra width */
-        }
-
-        h1 {
-            text-align: center;
-            color: teal;
-            margin: 0 0 25px 0;
-            font-size: 28px;
-        }
-
-        .display {
-            width: 100%;
-            height: 70px;
-            margin-bottom: 20px;
-            padding: 0 15px;
-            font-size: 28px;
-            text-align: right;
-            border: none;
-            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
             background-color: #f9f9f9;
-            box-shadow: inset 0 3px 10px rgba(0,0,0,0.15);
-            box-sizing: border-box;
+            margin: 0;
+            padding: 40px;
         }
-
-        .buttons {
+        /* Container Grid */
+        
+        .container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            justify-items: center;
         }
-
-        button {
-            height: 65px;
-            font-size: 24px;
-            font-weight: bold;
-            border: none;
-            border-radius: 14px;
-            cursor: pointer;
-            transition: all 0.2s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        /* Profile Card */
+        
+        .profile {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-
-        button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        
+        .profile:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
         }
-
-        .num, .dot {
-            background-color: #ffffff;
-            color: #333;
+        /* Profile Image */
+        
+        .profile img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
         }
-
-        .op {
-            background-color: #333333;
-            color: white;
+        /* Profile Info */
+        
+        .profile-info {
+            margin-top: 15px;
         }
-
-        .clear {
-            background-color: #e74c3c;
-            color: white;
-            font-size: 26px;
+        
+        .profile-info h3 {
+            font-size: 1.2rem;
+            color: #222;
+            margin: 10px 0 5px;
+            font-weight: 600;
         }
-
-        .zero {
-            grid-column: span 2;
+        
+        .profile-info p {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 5px 0 10px;
+        }
+        /* Company Logo */
+        
+        .company-logo {
+            width: 100px;
+            margin-top: 8px;
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 992px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
+
 <body>
+    <div class="container">
+        <div class="profile">
+            <img src="https://cdn.masaischool.com/masai-website/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="Vijay Shekhar Sharma">
+            <div class="profile-info">
+                <h3>Vijay Shekhar Sharma</h3>
+                <p>Founder & CEO</p>
+                <img src="https://cdn.masaischool.com/masai-website/paytm_rect_06df45a24f.svg" alt="Paytm" class="company-logo">
+            </div>
+        </div>
 
-    <div class="calculator">
-        <h1>Masai Calculator</h1>
-        <input type="text" class="display" readonly placeholder="0">
+        <div class="profile">
+            <img src="https://cdn.masaischool.com/masai-website/Rectangle_427_637d69bb57.png" alt="Kunal Shah">
+            <div class="profile-info">
+                <h3>Kunal Shah</h3>
+                <p>Founder</p>
+                <img src="https://cdn.masaischool.com/masai-website/cred_0a47d7b4f8.png" alt="CRED" class="company-logo">
+            </div>
+        </div>
 
-        <div class="buttons">
-            <button class="num">1</button>
-            <button class="num">2</button>
-            <button class="num">3</button>
-            <button class="op">+</button>
+        <div class="profile">
+            <img src="https://cdn.masaischool.com/masai-website/amrish_rau_pine_labs_144e5e587c.jpg" alt="Amrish Rau">
+            <div class="profile-info">
+                <h3>Amrish Rau</h3>
+                <p>CEO</p>
+                <img src="https://cdn.masaischool.com/masai-website/pine_labs_0aa2407434.png" alt="Pine Labs" class="company-logo">
+            </div>
+        </div>
 
-            <button class="num">4</button>
-            <button class="num">5</button>
-            <button class="num">6</button>
-            <button class="op">-</button>
+        <div class="profile">
+            <img src="https://cdn.masaischool.com/masai-website/Sampad_swain_Instamojo_f12bf6341e.jpg" alt="Sampad Swain">
+            <div class="profile-info">
+                <h3>Sampad Swain</h3>
+                <p>Co-Founder & CEO</p>
+                <img src="https://cdn.masaischool.com/masai-website/instamojo_8763e704f7.png" alt="Instamojo" class="company-logo">
+            </div>
+        </div>
 
-            <button class="num">7</button>
-            <button class="num">8</button>
-            <button class="num">9</button>
-            <button class="op">×</button>
+        <div class="profile">
+            <img src="https://cdn.masaischool.com/masai-website/Ankush_Sachdeva_Sharechat_4e44dbbe6b.jpg" alt="Ankush Sachdeva">
+            <div class="profile-info">
+                <h3>Ankush Sachdeva</h3>
+                <p>Co-Founder & CEO</p>
+                <img src="https://cdn.masaischool.com/masai-website/sharechat_rect_73d95cd4e1.svg" alt="ShareChat" class="company-logo">
+            </div>
+        </div>
 
-            <button class="clear">C</button>
-            <button class="num zero">0</button>
-            <button class="op">=</button>
-            <button class="op">/</button>
+        <div class="profile">
+            <img src="https://cdn.masaischool.com/masai-website/bhanu_pratap_singh_sharechat_11fdd7b47a.jpg" alt="Bhanu Pratap Singh">
+            <div class="profile-info">
+                <h3>Bhanu Pratap Singh</h3>
+                <p>Co-Founder & CEO</p>
+                <img src="https://cdn.masaischool.com/masai-website/sharechat_rect_73d95cd4e1.svg" alt="ShareChat" class="company-logo">
+            </div>
+        </div>
+
+        <div class="profile">
+            <img src="https://cdn.masaischool.com/masai-website/farid_ahsan_sharechat_1251f28141.png" alt="Farid Ahsan">
+            <div class="profile-info">
+                <h3>Farid Ahsan</h3>
+                <p>Co-Founder & CEO</p>
+                <img src="https://cdn.masaischool.com/masai-website/sharechat_rect_73d95cd4e1.svg" alt="ShareChat" class="company-logo">
+            </div>
+        </div>
+
+        <div class="profile">
+            <img src="https://cdn.masaischool.com/masai-website/Amit_Kumar_Agarwal_Nobroker_a8a279ad91.jpg" alt="Amit Kumar Agarwal">
+            <div class="profile-info">
+                <h3>Amit Kumar Agarwal</h3>
+                <p>Founder & CEO</p>
+                <img src="https://cdn.masaischool.com/masai-website/nobroker_rect_28c9778c30.svg" alt="NOBROKER" class="company-logo">
+            </div>
         </div>
     </div>
-
 </body>
+
 </html>
