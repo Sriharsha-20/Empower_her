@@ -2,164 +2,114 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masai School Investors</title>
-    <style>
-        /* General Page Styling */
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 40px;
-        }
-        /* Container Grid */
-        
-        .container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            justify-items: center;
-        }
-        /* Profile Card */
-        
-        .profile {
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            padding: 20px;
-            width: 100%;
-            max-width: 350px;
-            text-align: center;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .profile:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-        }
-        /* Profile Image */
-        
-        .profile img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-        }
-        /* Profile Info */
-        
-        .profile-info {
-            margin-top: 15px;
-        }
-        
-        .profile-info h3 {
-            font-size: 1.2rem;
-            color: #222;
-            margin: 10px 0 5px;
-            font-weight: 600;
-        }
-        
-        .profile-info p {
-            font-size: 0.95rem;
-            color: #666;
-            margin: 5px 0 10px;
-        }
-        /* Company Logo */
-        
-        .company-logo {
-            width: 100px;
-            margin-top: 8px;
-        }
-        /* Responsive Design */
-        
-        @media (max-width: 992px) {
-            .container {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        @media (max-width: 600px) {
-            .container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhavya Reddy | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="container">
-        <div class="profile">
-            <img src="https://cdn.masaischool.com/masai-website/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="Vijay Shekhar Sharma">
-            <div class="profile-info">
-                <h3>Vijay Shekhar Sharma</h3>
-                <p>Founder & CEO</p>
-                <img src="https://cdn.masaischool.com/masai-website/paytm_rect_06df45a24f.svg" alt="Paytm" class="company-logo">
-            </div>
-        </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">Yata Bhavya<span>.</span></div>
 
-        <div class="profile">
-            <img src="https://cdn.masaischool.com/masai-website/Rectangle_427_637d69bb57.png" alt="Kunal Shah">
-            <div class="profile-info">
-                <h3>Kunal Shah</h3>
-                <p>Founder</p>
-                <img src="https://cdn.masaischool.com/masai-website/cred_0a47d7b4f8.png" alt="CRED" class="company-logo">
-            </div>
-        </div>
+            <!-- Mobile nav toggle -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+            <label for="nav-toggle" class="nav-toggle-label">
+        ☰
+      </label>                                                                                                                                                                      
 
-        <div class="profile">
-            <img src="https://cdn.masaischool.com/masai-website/amrish_rau_pine_labs_144e5e587c.jpg" alt="Amrish Rau">
-            <div class="profile-info">
-                <h3>Amrish Rau</h3>
-                <p>CEO</p>
-                <img src="https://cdn.masaischool.com/masai-website/pine_labs_0aa2407434.png" alt="Pine Labs" class="company-logo">
-            </div>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="profile">
-            <img src="https://cdn.masaischool.com/masai-website/Sampad_swain_Instamojo_f12bf6341e.jpg" alt="Sampad Swain">
-            <div class="profile-info">
-                <h3>Sampad Swain</h3>
-                <p>Co-Founder & CEO</p>
-                <img src="https://cdn.masaischool.com/masai-website/instamojo_8763e704f7.png" alt="Instamojo" class="company-logo">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1>Hi, I'm <span>Bhavya</span></h1>
+                <p>
+                    A passionate B.Tech student and aspiring developer who loves building clean, responsive websites and learning new technologies every day.
+                </p>
+                <a href="#contact" class="btn-primary">Contact Me</a>
             </div>
         </div>
+    </section>
 
-        <div class="profile">
-            <img src="https://cdn.masaischool.com/masai-website/Ankush_Sachdeva_Sharechat_4e44dbbe6b.jpg" alt="Ankush Sachdeva">
-            <div class="profile-info">
-                <h3>Ankush Sachdeva</h3>
-                <p>Co-Founder & CEO</p>
-                <img src="https://cdn.masaischool.com/masai-website/sharechat_rect_73d95cd4e1.svg" alt="ShareChat" class="company-logo">
-            </div>
+    <!-- About Section (optional but nice) -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                I am a final-year B.Tech student with a strong interest in web development, problem solving, and continuous learning. I enjoy turning ideas into real projects using HTML, CSS, JavaScript, and Python. My goal is to build user-friendly, responsive, and
+                visually appealing web experiences.
+            </p>
         </div>
+    </section>
 
-        <div class="profile">
-            <img src="https://cdn.masaischool.com/masai-website/bhanu_pratap_singh_sharechat_11fdd7b47a.jpg" alt="Bhanu Pratap Singh">
-            <div class="profile-info">
-                <h3>Bhanu Pratap Singh</h3>
-                <p>Co-Founder & CEO</p>
-                <img src="https://cdn.masaischool.com/masai-website/sharechat_rect_73d95cd4e1.svg" alt="ShareChat" class="company-logo">
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>HTML5</h3>
+                    <p>Semantic, accessible, and clean structure for web pages.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>CSS3</h3>
+                    <p>Responsive layouts, flexbox, grid, and modern styling.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Interactive features and dynamic UI behavior.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Python</h3>
+                    <p>Scripting, problem solving, and backend basics.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Git & GitHub</h3>
+                    <p>Version control, collaboration, and project hosting.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Responsive Design</h3>
+                    <p>Optimized views for mobile, tablet, and desktop screens.</p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="profile">
-            <img src="https://cdn.masaischool.com/masai-website/farid_ahsan_sharechat_1251f28141.png" alt="Farid Ahsan">
-            <div class="profile-info">
-                <h3>Farid Ahsan</h3>
-                <p>Co-Founder & CEO</p>
-                <img src="https://cdn.masaischool.com/masai-website/sharechat_rect_73d95cd4e1.svg" alt="ShareChat" class="company-logo">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>
+                Feel free to reach out for collabs, projects, or opportunities.
+            </p>
+            <div class="contact-details">
+                <p><strong>Email:</strong> bhavyareddy506@gmail.com</p>
+                <p><strong>Location:</strong> Hyderabad, India</p>
             </div>
         </div>
+    </section>
 
-        <div class="profile">
-            <img src="https://cdn.masaischool.com/masai-website/Amit_Kumar_Agarwal_Nobroker_a8a279ad91.jpg" alt="Amit Kumar Agarwal">
-            <div class="profile-info">
-                <h3>Amit Kumar Agarwal</h3>
-                <p>Founder & CEO</p>
-                <img src="https://cdn.masaischool.com/masai-website/nobroker_rect_28c9778c30.svg" alt="NOBROKER" class="company-logo">
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>© 2025 Bhavya. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/BhaviReddyy" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/yata-bhavya-aa0a66272/" target="_blank">LinkedIn</a>
             </div>
         </div>
-    </div>
+    </footer>
 </body>
 
 </html>
