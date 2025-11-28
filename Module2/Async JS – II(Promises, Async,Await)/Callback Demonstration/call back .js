@@ -4,8 +4,8 @@ function displayMessage(name) {
 
 function getUserInput(callback) {
     setTimeout(function () {
-        let username = "Harsha";  
-        callback(username);      
+        let username = "Harsha"; 
+        callback(username);     
     }, 1000);
 }
 getUserInput(displayMessage);
