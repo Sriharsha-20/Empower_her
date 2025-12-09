@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Management App</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .form-box {
+            width: 300px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        .book-card {
+            width: 250px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        button { margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>Book Management App</h1>
+
+    <!-- Add Book Form -->
+    <div class="form-box">
+        <h3>Add Book</h3>
+        <input id="title" placeholder="Title"><br><br>
+        <input id="author" placeholder="Author"><br><br>
+        <input id="price" placeholder="Price"><br><br>
+        <input id="imageUrl" placeholder="Image URL"><br><br>
+        <button onclick="addBook()">Add Book</button>
+    </div>
+
+    <h2>Books List</h2>
+    <div id="books"></div>
+
+    <!-- Firebase Code File -->
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>
