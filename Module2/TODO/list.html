@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic To-Do List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        #todoContainer {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        #taskInput {
+            width: 70%;
+            padding: 8px;
+        }
+
+        #addBtn {
+            padding: 9px 12px;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .task {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid gray;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .deleteBtn {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Dynamic To-Do List</h2>
+
+    <div id="todoContainer">
+        <input type="text" id="taskInput" placeholder="Enter task">
+        <button id="addBtn">Add Task</button>
+
+        <div id="taskList"></div>
+    </div>
+
+    <script>
+        const input = document.getElementById("taskInput");
+        const addBtn = document.getElementById("addBtn");
+        const taskList = document.getElementById("taskList");
+
+        addBtn.addEventListener("click", addTask);
+
+        function addTask() {
+            const taskText = input.value.trim();
+            if (taskText === "") return;
+
+            const div = document.createElement("div");
+            div.className = "task";
+
+            div.innerHTML = `
+                <span>${taskText}</span>
+                <button class="deleteBtn" onclick="deleteTask(this)">Delete</button>
+            `;
+
+            taskList.appendChild(div);
+            input.value = "";
+        }
+
+        function deleteTask(button) {
+            button.parentElement.remove();
+        }
+    </script>
+
+</body>
+</html>

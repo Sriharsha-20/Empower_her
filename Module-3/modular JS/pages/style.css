@@ -1,0 +1,92 @@
+/* General Page Styling */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f7;
+}
+
+/* Navbar */
+nav {
+    background: #333;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #eee;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Page Titles */
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
+}
+
+/* Inputs */
+input {
+    width: 280px;
+    padding: 12px;
+    font-size: 16px;
+    margin: 8px 0;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Buttons */
+button {
+    width: 150px;
+    padding: 12px;
+    font-size: 16px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* Todos Container */
+#todos-container {
+    width: 80%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* Todo Card */
+#todos-container div {
+    background: white;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+#todos-container h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <script type="module">
+        import { navbar } from "../components/navbar.js";
+        import { footer } from "../components/footer.js";
+        import "../scripts/signup.js";
+
+        document.getElementById("navbar").innerHTML = navbar();
+        document.getElementById("footer").innerHTML = footer();
+    </script>
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <h2>Signup</h2>
+    <input id="name" placeholder="Enter Name">
+    <br><br>
+    <input id="email" placeholder="Enter Email">
+    <br><br>
+    <input id="password" placeholder="Enter Password" type="password">
+    <br><br>
+    <button id="signupBtn">Signup</button>
+
+    <div id="footer"></div>
+</body>
+<script type="module">
+    import navbar from './components/navbar.js'; import footer from './components/footer.js'; import signup from './pages/signup.js'; document.getElementById('nav').appendChild(navbar()); document.getElementById('footer').appendChild(footer()); signup();
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L0 - Save and Load User Notes</title>
+</head>
+
+<body>
+    <h2>L0 - Save and Load User Notes</h2>
+
+    <!-- Textarea for user notes -->
+    <textarea id="notes" rows="8" cols="40" placeholder="Write your notes here..."></textarea>
+    <br><br>
+
+    <!-- Buttons -->
+    <button id="saveBtn">Save Notes</button>
+    <button id="loadBtn">Load Notes</button>
+    <button id="clearBtn">Clear Notes</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
